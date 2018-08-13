@@ -1,6 +1,6 @@
 @media print{
     #headSculptureWrapper{
-        display:flex;
+        display:none;
     }
     .private{
         display: block;

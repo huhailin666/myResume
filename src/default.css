@@ -1,5 +1,5 @@
 *{padding:0;margin:0;}
-*{box-sizing:border-box; color:#383733; transition: all 1s;}
+*{box-sizing:border-box; color:#383733; transition: all 1s; word-break: break-all;}
 *::before{box-sizing:border-box;}
 *::after{box-sizing:border-box;}
 a{text-decoration: none; cursor: pointer;}

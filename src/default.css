@@ -94,7 +94,8 @@ aside .information li{
     margin:10px 0;
 }
 aside .information li span{
-    font-size:16px;
+    font-size:15px;
+    line-height: 1.8;
     font-weight:bold;
     padding-left:5px;
 }
@@ -112,7 +113,10 @@ aside .mainSkill li .starts{
     padding-left:5px;
 }
 aside .mainSkill li p{
+    margin-top:5px;
     font-weight: normal;
+    font-size: 15px;
+    line-height: 1.8;
 }
 aside .introduce ul{
     margin:30px 0;
@@ -120,6 +124,20 @@ aside .introduce ul{
 aside .introduce li{
     list-style: square;
     margin:3px 0;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.otherLinksPrint {
+    display: none;
+}
+.otherLinksPrint li{
+    margin:10px 0;
+}
+.otherLinksPrint ul{
+    margin:10px 0;
+}
+.otherLinksPrint svg{
+    margin-right:5px;
 }
 /* mainSide */
 .mainSide{
@@ -139,6 +157,8 @@ aside .introduce li{
     list-style: square;
     word-break: break-all;
     margin:20px 0;
+    font-size: 15px;
+    line-height: 1.8;
 }
 .mainSide .portfolio li{
     border:3px dashed  #EDEDED;
@@ -147,6 +167,7 @@ aside .introduce li{
 }
 .mainSide .portfolio li img{
     width:70%;
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.55);
 }
 .mainSide .portfolio .portfolioShow{
     display: flex;
@@ -167,6 +188,22 @@ aside .introduce li{
 .mainSide .portfolioShow .portfolioLink>div:hover{
     text-decoration: underline;
 }
+.mainSide .portfolioList .portfolioDescribe{
+    margin-top:20px;
+}
+.mainSide .portfolioList .portfolioDescribe .row{
+    margin:10px 0;
+}
+.portfolioDescribe .row svg{
+    width:1em; height:1em;
+}
+.portfolioDescribe .row span{
+    font-size:14px;
+    font-weight:bold;
+}
+
+
+
 .portfolioLink svg{
     width:1em;
     height:1em;
@@ -200,4 +237,27 @@ aside .introduce li{
     100%{
         transform: rotate(360deg)
     }
+}
+.mainSide .otherLinks li a{
+    position: relative;
+}
+.QRCode{
+    position:absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top:-40px;
+    left:100%;
+    opacity: 0;
+}
+.weixin:hover .QRCode{
+    opacity: 1;
+}
+.portfolioDescribe>.row>.describe{
+    font-weight: normal;
+    line-height:1.8;
+    font-size:15px;
+    word-break: break-all;
+}
+.private,#headSculptureWrapper{
+    display:none;
 }

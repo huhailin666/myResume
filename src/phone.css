@@ -1,0 +1,42 @@
+@media (max-width:1200px){
+    .page{
+        width:100%;
+    }
+    main{
+        flex-direction: column;
+    }
+    aside{
+        width:100%;
+    }
+    .mainSide{
+        width:100%;
+        padding:0;
+    }
+    aside .mainSkill li,
+    aside .introduce li,
+    .mainSide .skillList li{
+        list-style: square inside;
+    }
+    .mainSide .otherLinks li{
+        margin-right:10px;
+    }
+    .mainSide .portfolio .portfolioShow{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mainSide .portfolio .portfolioShow img{
+        flex-grow: 1;
+        width:100%;
+    }
+    .mainSide .portfolioShow .portfolioLink{
+        flex-grow: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    aside .information li{
+        margin:10px 0;
+    }
+}

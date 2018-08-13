@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./default.css">
+    <link rel="stylesheet" href="./print.css">
+    <link rel="stylesheet" href="./phone.css">
     <style type="text/css">
         .icon {
             width: 1.5em; height: 1.5em;
@@ -18,7 +20,7 @@
 <body>
     <div class="page">
         <div class="topBar">
-            <div class="headSculptureWrapper">
+            <div class="headSculptureWrapper private" id="headSculptureWrapper">
                 <img src="../img/简历头像.JPG" alt="我的头像" class="headSculpture" width=200px>
             </div>
             <div class="summary">
@@ -44,7 +46,7 @@
                             </svg><span>年龄</span>
                             <div class="answer">21</div>
                         </li>
-                        <li>
+                        <li class="private">
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-dianhua"></use>
                             </svg><span>手机</span>
@@ -111,6 +113,33 @@
                         <li>善于与上下流沟通,性格随和。</li>
                     </ul>
                 </div>
+                <div class="otherLinksPrint">
+                    <h1>其他链接</h1>
+                    <div class="bottomLine"></div>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/xuanzebin" target="_blank">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-github"></use>
+                                </svg><span>GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.jianshu.com/u/768a46354348" target="_blank">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-yanzheng-jianshu"></use>
+                                </svg><span>简书博客</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://xuanzebin.github.io/myResume/src/" target="_blank">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-wangye"></use>
+                                </svg><span>简历网页版</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </aside>
             <div class="mainSide">
                 <div class="skillList">
@@ -119,10 +148,10 @@
                     <ul>
                         <li>能够根据HTML5标准书写出符合语义化的html代码。如标签&lt;header&gt;、&lt;main&gt;、&lt;section&gt;、&lt;footer&gt; 等。能够使用flex、float+清除浮动布局，能够用多种方式进行水平居中、垂直居中。</li>
                         <li>能够使用Canvas的部分API进行画图，并用Canvas做了《Canvas画板》，并在画板中添加了笔头粗细选择、橡皮檫、撤回、清空、下载和颜色选择等功能。</li>
-                        <li>熟练原生JavaScript（ES6、TypeScript），掌握new、DOM操作、闭包、原型链、继承等相关概念的原理和使用方法。</li>
+                        <li>熟练原生JavaScript（ES6），掌握new、DOM操作、闭包、原型链、继承等相关概念的原理和使用方法。</li>
                         <li>了解JSONP、AJAX、Cookie、Session、LocalStorage、SessionStorage、Cache-Control、Etag、同源策略和跨域等HTTP知识。</li>
-                        <li>能够使用 jQuery 进行 DOM 操作，使用常见的API完成需求。用jQuery做了苹果风格的无缝轮播和网易云音乐等作品。</li>
-                        <li>能熟练地使用Vue，能够使用Vue.js完成需求，vue-cli、vue-router、vue-resource、vuex、slot、filters、组件通信、数据绑定等。了解Vue的生命周期及其钩子。</li>
+                        <li>能够使用 jQuery 进行 DOM 操作，使用常见的API完成需求。用jQuery做了苹果风格的无缝轮播等作品。</li>
+                        <!-- <li>能熟练地使用Vue，能够使用Vue.js完成需求，vue-cli、vue-router、vue-resource、vuex、slot、filters、组件通信、数据绑定等。了解Vue的生命周期及其钩子。</li> -->
                         <li>了解React框架，并使用该框架完成了待办事项todolist作品的制作，了解setState的机制，了解React的生命周期及其钩子。</li>
                         <li>了解命令行，能够使用命令行进行常用的操作。了解git，能够使用git的命令行进行代码版本的管理，并写了相应博客。</li>
                     </ul>
@@ -150,47 +179,26 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="portfolioDescribe"></div>
-                            </li>
-                            <li>
-                                <div class="portfolioShow">
-                                    <img src="../img/portfolioImg/Canvas.png" alt="">
-                                    <div class="portfolioLink">
-                                        <div class="codeLink">
-                                            <svg class="icon" aria-hidden="true">
-                                                <use xlink:href="#icon-link"></use>
-                                            </svg>
-                                            <a href="https://github.com/xuanzebin/canvas-demo" class="codeLink" target="_blank">源码链接</a>
-                                        </div>
-                                        <div class="previewLink">
-                                            <svg class="icon" aria-hidden="true">
-                                                <use xlink:href="#icon-link"></use>
-                                            </svg>
-                                            <a href="https://xuanzebin.github.io/canvas-demo/" class="previewLink" target="_blank">预览链接</a>
-                                        </div>
+                                <div class="portfolioDescribe">
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-xiangmu"></use>
+                                        </svg>
+                                        <span>名称：</span><span class="describe">《口袋待办》</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-techang"></use>
+                                        </svg>
+                                        <span>技术：</span><span class="describe">React、组件化、LeanCloud、媒体查询</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-jineng"></use>
+                                        </svg>
+                                        <span>描述：</span><span class="describe">该项目使用React实现了一个口袋待办的网页应用，用户可以通过该应用注册、登录和登出，在应用中写下自己一天的待办事项并提交上传至LeanCloud数据库中，并保存在个人帐号下，用户可以对自己的待办事项的状态进行切换，或者删除不需要的待办事项，另外，用户在登录一次过后，在同样的设备进入该应用时应用会监测用户的登出状态，若没有登出，则无须重复登录。这是我的第一个用React实现的应用，目前已经发布上线。这个应用是通过LeanCloud提供的API和库实现了数据的上传、保存和下载，通过React组件UserDialog并结合LeanCloud提供的API实现用户的注册、登录和忘记密码等功能，通过React组件TodoInput来监听用户的输入并及时的反馈在输入栏中，通过组件TodoItem来展示待办事项的列表，并监听用户对TodoItem的toggle以及deleted的操作等等，最终实现了该应用的所有功能。</span>
                                     </div>
                                 </div>
-                                <div class="portfolioDescribe"></div>
-                            </li>
-                            <li>
-                                <div class="portfolioShow">
-                                    <img src="../img/portfolioImg/CSS-Cartoon.png" alt="">
-                                    <div class="portfolioLink">
-                                        <div class="codeLink">
-                                            <svg class="icon" aria-hidden="true">
-                                                <use xlink:href="#icon-link"></use>
-                                            </svg>
-                                            <a href="https://github.com/xuanzebin/demo-css-cartoon" class="codeLink" target="_blank">源码链接</a>
-                                        </div>
-                                        <div class="previewLink">
-                                            <svg class="icon" aria-hidden="true">
-                                                <use xlink:href="#icon-link"></use>
-                                            </svg>
-                                            <a href="https://xuanzebin.github.io/demo-css-cartoon/" class="previewLink" target="_blank">预览链接</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portfolioDescribe"></div>
                             </li>
                             <li>
                                 <div class="portfolioShow">
@@ -210,7 +218,104 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="portfolioDescribe"></div>
+                                <div class="portfolioDescribe">
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-xiangmu"></use>
+                                        </svg>
+                                        <span>名称：</span><span class="describe">《苹果风格的无缝轮播》</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-techang"></use>
+                                        </svg>
+                                        <span>技术：</span><span class="describe">JavaScript、jQuery</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-jineng"></use>
+                                        </svg>
+                                        <span>描述：</span><span class="describe">该项目通过使用jQuery实现了轮播图片的无缝切换、自动切换、前后切换、按图片切换和触摸轮播停止切换的功能。</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="portfolioShow">
+                                    <img src="../img/portfolioImg/Canvas.png" alt="">
+                                    <div class="portfolioLink">
+                                        <div class="codeLink">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-link"></use>
+                                            </svg>
+                                            <a href="https://github.com/xuanzebin/canvas-demo" class="codeLink" target="_blank">源码链接</a>
+                                        </div>
+                                        <div class="previewLink">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-link"></use>
+                                            </svg>
+                                            <a href="https://xuanzebin.github.io/canvas-demo/" class="previewLink" target="_blank">预览链接</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolioDescribe">
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-xiangmu"></use>
+                                        </svg>
+                                        <span>名称：</span><span class="describe">《口袋画板》</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-techang"></use>
+                                        </svg>
+                                        <span>技术：</span><span class="describe">原生JavaScript、Canvas、移动端、SVG、特性检测</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-jineng"></use>
+                                        </svg>
+                                        <span>描述：</span><span class="describe">该项目使用原生JavaScript和Canvas标签实现了一个口袋画板的应用，主要调用 Canvas API，实现了线粗、调色、橡皮擦、撤回、清空和保存的功能。用 context.clearRect()实现了橡皮檫和清空的功能，用className切换实现了颜色切换的功能，通过控制lineWidth的大小来调节线粗，通过设置一个ImgHash来保存每一笔之后的不同图像，通过返回到前一个图像来实现撤销的功能，用meta:vp、特性检测、ontouch事件以及禁止触发默认事件实现了触屏设备与web端兼容。</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="portfolioShow">
+                                    <img src="../img/portfolioImg/CSS-Cartoon.png" alt="">
+                                    <div class="portfolioLink">
+                                        <div class="codeLink">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-link"></use>
+                                            </svg>
+                                            <a href="https://github.com/xuanzebin/demo-css-cartoon" class="codeLink" target="_blank">源码链接</a>
+                                        </div>
+                                        <div class="previewLink">
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-link"></use>
+                                            </svg>
+                                            <a href="https://xuanzebin.github.io/demo-css-cartoon/" class="previewLink" target="_blank">预览链接</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolioDescribe">
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-xiangmu"></use>
+                                        </svg>
+                                        <span>名称：</span><span class="describe">《小猪佩奇》</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-techang"></use>
+                                        </svg>
+                                        <span>技术：</span><span class="describe">JavaScript、jQuery、Prism.js</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-jineng"></use>
+                                        </svg>
+                                        <span>描述：</span><span class="describe">该项目通过动态向&lt;style&gt;标签和&lt;pre&gt;标签添加文本，绘制出小猪佩奇的过程，用户可以调整小猪佩奇的绘制速度，或者直接跳过绘制过程。本次作品用css3实现动画的效果，用prism.js实现代码高亮的效果。并通过调整添加文本的速度实现了三个动画播放的调速按钮。</span>
+                                    </div>
+                                </div>
                             </li>
                             <li>
                                 <div class="portfolioShow">
@@ -230,7 +335,26 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="portfolioDescribe"></div>
+                                <div class="portfolioDescribe">
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-xiangmu"></use>
+                                        </svg>
+                                        <span>名称：</span><span class="describe">《键盘导航》</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-techang"></use>
+                                        </svg>
+                                        <span>技术：</span><span class="describe">原生JavaScript、LocalStorage、JSON数据转换、CSS Gradient Generator</span>
+                                    </div>
+                                    <div class="row">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-jineng"></use>
+                                        </svg>
+                                        <span>描述：</span><span class="describe">该项目通过使用原生JavaScript实现了一个键盘导航，该导航可以通过按下对应的键盘按钮来进入对应的网页，用户可以自己编辑按钮对应的网页，编辑后会自动获取该网页的图标并显示在键盘导航对应的按钮上。另外，该键盘导航用CSS Gradient Generator 实现了键盘颜色的渐变，用LocalStorage实现了用户编辑网页后把数据保存到本地的功能，该功能可以使用用户关闭导航后数据不会消失，待用户下次打开依旧可以获取到上一次编辑的网页。</span>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -253,11 +377,12 @@
                                 </svg><span>简书博客</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="" target="_blank">
+                        <li class="weixin">
+                            <a href="https://upload-images.jianshu.io/upload_images/11958479-322d52f9781f611f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" target="_blank">
                                 <svg class="icon" aria-hidden="true">
                                     <use xlink:href="#icon-111"></use>
                                 </svg><span>WeChat</span>
+                                <img src="../img/二维码.png" alt="微信二维码图片" class="QRCode" width=150px>
                             </a>
                         </li>
                     </ul>
@@ -265,7 +390,7 @@
             </div>
         </main>
     </div>
-    <script src="//at.alicdn.com/t/font_789018_b94cow95pm8.js"></script>
+    <script src="//at.alicdn.com/t/font_789018_qtmh45olrhc.js"></script>
     <script src="../vendor/jquery-3.3.1.min.js"></script>
     <script src="./main.js"></script>
 </body>

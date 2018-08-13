@@ -1,0 +1,40 @@
+@media print{
+    #headSculptureWrapper{
+        display:flex;
+    }
+    .private{
+        display: block;
+    }
+    aside .mainSkill{
+        margin-top:400px;
+    }
+    .mainSide .portfolio{
+        margin-top:600px;
+    }
+    .mainSide .portfolio li:nth-child(2){
+        margin-top:600px;
+    }
+    
+    .mainSide .portfolio li:nth-child(4){
+        margin-top:30px;
+    }
+    .mainSide .portfolio li:nth-child(5){
+        margin-bottom:0px;
+    }
+    .mainSide{
+        padding:0 40px;
+    }
+    .portfolioDescribe>.row>.describe{
+        line-height:1.8;
+    }
+    .otherLinks{
+        display: none;
+    }
+    .otherLinksPrint {
+        display: block;
+    }
+    .bottomLine{
+        transform: scale(4,1);
+        transform-origin: left;
+    }
+}

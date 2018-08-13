@@ -1,8 +1,8 @@
 *{padding:0;margin:0;}
-*{box-sizing:border-box; color:#383733;}
+*{box-sizing:border-box; color:#383733; transition: all 1s;}
 *::before{box-sizing:border-box;}
 *::after{box-sizing:border-box;}
-a{text-decoration: none;}
+a{text-decoration: none; cursor: pointer;}
 ul,ol,li{list-style: none;}
 body{
     display: flex;
@@ -11,6 +11,9 @@ body{
     background-size: 1200% 1200%;
     animation: backgroundGradient 60s ease infinite;
 }
+h1,span,p,li{
+    cursor: default;
+}
 .page{
     width:1200px;
     box-shadow: 0px 0px 53px -1px rgba(0,0,0,0.75);
@@ -18,6 +21,20 @@ body{
 .bottomLine{
     border:1.5px #383733 solid;
     width:40px;
+}
+.bottomLine.active{
+    animation:lineMove 0.3s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes lineMove{
+    0%{
+        transform: scale(1,1);
+        transform-origin: left;
+    }
+    100%{
+        transform: scale(4,1);
+        transform-origin: left;
+    }
 }
 @keyframes backgroundGradient { 
     0%{background-position:0% 50%}
@@ -63,6 +80,7 @@ aside{
     width:30%;
     padding:0 40px;
     background: #EDEDED;
+    padding-top:33px;
 }
 h1{
     line-height: 60px;
@@ -121,4 +139,65 @@ aside .introduce li{
     list-style: square;
     word-break: break-all;
     margin:20px 0;
+}
+.mainSide .portfolio li{
+    border:3px dashed  #EDEDED;
+    padding:20px 30px;
+    margin:10px 0;
+}
+.mainSide .portfolio li img{
+    width:70%;
+}
+.mainSide .portfolio .portfolioShow{
+    display: flex;
+    align-items: center;
+    
+}
+.mainSide .portfolioShow .portfolioLink{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainSide .portfolioShow .portfolioLink>div{
+    margin:10px 0;
+    cursor: pointer;
+}
+.mainSide .portfolioShow .portfolioLink>div:hover{
+    text-decoration: underline;
+}
+.portfolioLink svg{
+    width:1em;
+    height:1em;
+}
+.mainSide .otherLinks{
+    padding-bottom:100px;
+}
+.mainSide .otherLinks ul{
+    display:flex;
+    align-items: center;
+}
+.mainSide .otherLinks li{
+    margin-right:40px;
+}
+.mainSide .otherLinks li svg{
+    margin-right:5px;
+    cursor: pointer;
+}
+.mainSide .otherLinks span{
+    cursor: pointer;
+}
+.mainSide .otherLinks li:hover svg{
+    cursor: pointer;
+    animation: svgRotate linear 0.4s;
+    animation-fill-mode: forwards;
+}   
+@keyframes svgRotate{
+    0%{
+        transform: rotate(0)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
 }

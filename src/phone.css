@@ -68,4 +68,7 @@
         display:flex;
         justify-content: center;
     }
+    .bottomLine.active{
+        animation: none;
+    }
 }

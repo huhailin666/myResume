@@ -38,9 +38,10 @@
     }
     .mainSide .portfolioShow .portfolioLink{
         flex-grow: 0;
+        width:100%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
     aside .information li{

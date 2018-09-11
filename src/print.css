@@ -1,7 +1,4 @@
 @media print{
-    #headSculptureWrapper{
-        display:none;
-    }
     .private{
         display: block;
     }

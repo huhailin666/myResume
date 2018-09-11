@@ -50,6 +50,7 @@ main{
 .topBar{
     background: #CCCBC9;
     display:flex;
+    align-items: center;
 }
 .topBar .headSculptureWrapper{
     display:flex;
@@ -258,6 +259,6 @@ aside .introduce li{
     font-size:15px;
     word-break: break-all;
 }
-.private,#headSculptureWrapper{
+/* .private,#headSculptureWrapper{
     display:none;
-}
+} */

@@ -32,7 +32,7 @@
         flex-direction: column;
         justify-content: center;
     }
-    .mainSide .portfolio .portfolioShow img{
+    .mainSide .portfolio .portfolioShow >img{
         flex-grow: 1;
         width:100%;
     }
@@ -81,4 +81,12 @@
     .topBar .headSculptureWrapper{
         margin:30px 0;
     }
+    .mainSide .portfolio .portfolioShow .img-contain{
+        flex-grow: 1;
+        width:100%;
+    } 
+    .mainSide .portfolio .portfolioShow .img-contain img{
+        width:50%;
+    }
+
 }

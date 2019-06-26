@@ -63,8 +63,7 @@ main{
 }
 .topBar .headSculptureWrapper img {
     width:150px;
-    height:300px;
-
+    height:250px;
 }
 .topBar .summary{
     flex-grow: 1;
